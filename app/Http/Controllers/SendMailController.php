@@ -11,6 +11,10 @@ class SendMailController extends Controller
     public function send(Request $request)
     {
         // return $request->all();
+        $this->Validate($request, [
+            'full_name' => 'required',
+            'phone' => 'required|numeric',
+        ]);
         Mail::send(new SendMail($request->all()));
         return redirect()->back()->with('message', 'Thank you for placing the order');
     }

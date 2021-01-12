@@ -38,6 +38,16 @@
             </div>
             @endif
 
+
+            @if($errors->any())
+            <div>
+                <ul class="alert alert-danger">
+                <li>
+                {{ implode('', $errors->all(':message')) }}#
+            </li></ul>
+            </div>
+        @endif
+
             <!-- Heading -->
             <h2 class="my-5 h2 text-center" style="color: rgb(132, 20, 45);">Place Your Order</h2>
 
@@ -57,7 +67,27 @@
 
                             <!--Grid row-->
                             <div class="row">
+                                <div class="col-lg-12 col-md-12 mb-4">
 
+                                    <label for="country">Product</label>
+                                    <select class="custom-select d-block w-100" id="country" required name="item">
+                                        <option value="">Select Item</option>
+
+                                        <option value="1" @if (request()->get('id') == 1)
+                                            selected
+                                            @endif>DITOKI 1@KSH4320</option>
+                                        <option value="2" @if (request()->get('id') == 2)
+                                            selected
+                                            @endif>DITOKI 1@KSH6320</option>
+                                        <option value="3" @if (request()->get('id') == 3)
+                                            selected
+                                            @endif>DITOKI 1@KSH9870</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid country.
+                                    </div>
+
+                                </div>
                                 <!--Grid column-->
                                 <div class="col-md-12 mb-2">
 
@@ -81,26 +111,27 @@
                             </div>
 
                             <!--Grid row-->
-                            <div class="row">
+                            <div class="md-form ">
+                                <input type="text" id="firstName" class="form-control" name="city">
+                                <label for="city" class="">City</label>
+                            </div>
+                            <!--Grid column-->
+                            <div class="col-lg-12 col-md-12 mb-4">
 
-                                <!--Grid column-->
-                                <div class="col-lg-12 col-md-12 mb-4">
-
-                                    <label for="country">City</label>
-                                    <select class="custom-select d-block w-100" id="country" required name="city">
-                                        <option value="">City/Region</option>
-                                        <option value="Nairobi">Nairobi</option>
-                                        <option value="Mombasa">Mombasa</option>
-                                        <option value="Kisumu">Kisumu</option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        Please select a valid country.
-                                    </div>
-
+                                <label for="country">State/Region</label>
+                                <select class="custom-select d-block w-100" id="country" name="region">
+                                    <option value="">City/Region</option>
+                                    <option value="Nairobi">Nairobi</option>
+                                    <option value="Mombasa">Mombasa</option>
+                                    <option value="Kisumu">Kisumu</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid country.
                                 </div>
-                                <!--Grid column-->
 
                             </div>
+                            <!--Grid column-->
+
                             <!--Grid row-->
 
                             <!--email-->
@@ -111,14 +142,16 @@
 
                             <!--address-->
                             <div class="md-form mb-5">
-                                <input type="text" id="phone" class="form-control" placeholder="+254..." name="phone">
-                                <label for="phone" class="">Phone Number</label>
+                                <input type="text" id="phone" class="form-control" placeholder="+254..." name="phone"
+                                    reqired>
+                                <label for="phone">Phone Number</label>
                             </div>
                             <hr>
 
                             <hr class="mb-4">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Complete order</button>
-
+                            <button class="btn btn-primary btn-lg " type="submit">Complete order</button>
+                            <button class="btn  btn-lg " type="submit" style="background: #84142d; color: #fff"
+                                href="/">Continue shopping</button>
                         </form>
 
                     </div>
