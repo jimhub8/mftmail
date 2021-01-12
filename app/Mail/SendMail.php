@@ -31,10 +31,8 @@ class SendMail extends Mailable
     public function build()
     {
         // return $this->markdown('mail/mail');
-
-
         return $this->from('jimlaravel@gmail.com')
             ->markdown('mail.mail')
-            ->to('jimlaravel@gmail.com');
+            ->to(env('MAIL_TO', 'jimkiarie8@gmail.com'));
     }
 }

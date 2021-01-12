@@ -3,12 +3,6 @@
 
 You have a new order from
 
-
-{{-- Email: {{ $data['email'] }}
-Phone: {{ $data['phone'] }}
-City: {{ $data['city'] }}
-Address: {{ $data['address'] }} --}}
-
 <ul class="list-group" style="display: flex;flex-direction: column;padding-left: 0;margin-bottom: 0;border-radius: .25rem;}">
     <li class="list-group-item" style="    position: relative;display: block;padding: .5rem 1rem;text-decoration: none;background-color: #fff;">Name: {{ $data['full_name'] }}</li>
     <li class="list-group-item" style="    position: relative;display: block;padding: .5rem 1rem;text-decoration: none;background-color: #fff;">Phone: {{ $data['phone'] }}</li>
