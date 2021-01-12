@@ -38,15 +38,15 @@
             </div>
             @endif
 
-
             @if($errors->any())
             <div>
                 <ul class="alert alert-danger">
-                <li>
-                {{ implode('', $errors->all(':message')) }}#
-            </li></ul>
+                    <li>
+                        {{ implode('', $errors->all(':message')) }}#
+                    </li>
+                </ul>
             </div>
-        @endif
+            @endif
 
             <!-- Heading -->
             <h2 class="my-5 h2 text-center" style="color: rgb(132, 20, 45);">Place Your Order</h2>
@@ -142,8 +142,7 @@
 
                             <!--address-->
                             <div class="md-form mb-5">
-                                <input type="text" id="phone" class="form-control" placeholder="+254..." name="phone"
-                                    reqired>
+                                <input type="text" id="phone" class="form-control" placeholder="+254..." name="phone">
                                 <label for="phone">Phone Number</label>
                             </div>
                             <hr>

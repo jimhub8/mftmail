@@ -1,7 +1,7 @@
 @component('mail::message')
 # New Order
 
-You have a new order from
+You have a new order for {{ $data['item'] }} DITOKI from
 
 <ul class="list-group" style="display: flex;flex-direction: column;padding-left: 0;margin-bottom: 0;border-radius: .25rem;}">
     <li class="list-group-item" style="    position: relative;display: block;padding: .5rem 1rem;text-decoration: none;background-color: #fff;">Name: {{ $data['full_name'] }}</li>
