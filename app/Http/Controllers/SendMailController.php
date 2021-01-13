@@ -14,6 +14,7 @@ class SendMailController extends Controller
         $this->Validate($request, [
             'full_name' => 'required',
             'phone' => 'required',
+            'address' => 'required',
         ]);
         Mail::send(new SendMail($request->all()));
         return redirect()->back()->with('message', 'Thank you for placing the order');

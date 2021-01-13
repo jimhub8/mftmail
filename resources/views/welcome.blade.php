@@ -25,12 +25,23 @@
     <!-- Styles -->
     <!-- Scripts -->
     {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
+    <style>
+        /* .mt-5, .my-5 {
+    margin-top: 0 important;
+} */
+    </style>
 </head>
 
 <body>
+    <nav class="navbar fixed-top navbar-light" style="background: #84142d">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: #fff">Navbar</a>
+        </div>
+    </nav>
 
     <!--Main layout-->
-    <main class="mt-5 pt-4">
+    <main class="mt-5 pt-4" style="background: #eee;margin-top: 0 important;    margin-bottom: 60px;">
+
         <div class="container wow fadeIn">
             @if(session()->has('message'))
             <div class="alert alert-success">
@@ -39,96 +50,55 @@
             @endif
 
             @if($errors->any())
+            @foreach ($errors->all() as $error)
+              <div class="alert alert-danger">{{ $error }}</div>
+            @endforeach
+            @endif
+
+            {{-- @if($errors->any())
             <div>
                 <ul class="alert alert-danger">
                     <li>
                         {{ implode('', $errors->all(':message')) }}#
-                    </li>
-                </ul>
-            </div>
-            @endif
+            </li>
+            </ul>
+        </div>
+        @endif --}}
 
-            <!-- Heading -->
-            <h2 class="my-5 h2 text-center" style="color: rgb(132, 20, 45);">Place Your Order</h2>
+        <!-- Heading -->
+        <h2 class="my-5 h2 text-center" style="color: rgb(132, 20, 45);">Place Your Order</h2>
 
-            <!--Grid row-->
-            <div class="row">
+        <!--Grid row-->
+        <div class="row">
 
-                <!--Grid column-->
-                <div class="col-md-10 mb-6 offset-1">
+            <!--Grid column-->
+            <div class="col-md-10 mb-6 offset-1">
 
-                    <!--Card-->
-                    <div class="card">
+                <!--Card-->
+                <div class="card">
 
-                        <!--Card content-->
+                    <!--Card content-->
 
-                        <form action="{{ route('send') }}" method="POST" class="card-body">
-                            @csrf
+                    <form action="{{ route('send') }}" method="POST" class="card-body">
+                        @csrf
 
-                            <!--Grid row-->
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 mb-4">
-
-                                    <label for="country">Product</label>
-                                    <select class="custom-select d-block w-100" id="country" required name="item">
-                                        <option value="">Select Item</option>
-
-                                        <option value="1" @if (request()->get('id') == 1)
-                                            selected
-                                            @endif>DITOKI 1@KSH4320</option>
-                                        <option value="2" @if (request()->get('id') == 2)
-                                            selected
-                                            @endif>DITOKI 2@KSH6320</option>
-                                        <option value="3" @if (request()->get('id') == 3)
-                                            selected
-                                            @endif>DITOKI 3@KSH9870</option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        Please select a valid country.
-                                    </div>
-
-                                </div>
-                                <!--Grid column-->
-                                <div class="col-md-12 mb-2">
-
-                                    <!--firstName-->
-                                    <div class="md-form ">
-                                        <input type="text" id="firstName" class="form-control" name="full_name">
-                                        <label for="firstName" class="">Full name</label>
-                                    </div>
-
-                                </div>
-
-                                <!--Grid column-->
-
-                            </div>
-                            <!--Grid row-->
-
-                            <div class="md-form mb-5">
-                                <input type="text" name="address" id="address" class="form-control"
-                                    placeholder="Address/street/major landmark">
-                                <label for="address" class="">Address</label>
-                            </div>
-
-                            <!--Grid row-->
-                            <div class="md-form ">
-                                <input type="text" id="firstName" class="form-control" name="city">
-                                <label for="city" class="">City</label>
-                            </div>
-                            <!--Grid column-->
+                        <!--Grid row-->
+                        <div class="row">
                             <div class="col-lg-12 col-md-12 mb-4">
 
-                                <label for="country">State/Region</label>
-                                <select class="custom-select d-block w-100" id="country" name="region">
-                                    <option value="">City/Region</option>
-                                    <option value="Nairobi">Nairobi</option>
-                                    <option value="Coast">Coast</option>
-                                    <option value="Nyanza">Nyanza</option>
-                                    <option value="Central">Central</option>
-                                    <option value="Rift valley">Rift valley</option>
-                                    <option value="Eastern">Eastern</option>
-                                    <option value="Western">Western</option>
-                                    <option value="North Eastern">North Eastern</option>
+                                <label for="country">Product</label>
+                                <select class="custom-select d-block w-100" id="country" required name="item">
+                                    <option value="">Select Item</option>
+
+                                    <option value="1" @if (request()->get('id') == 1)
+                                        selected
+                                        @endif>DITOKI 1@KSH4320</option>
+                                    <option value="2" @if (request()->get('id') == 2)
+                                        selected
+                                        @endif>DITOKI 2@KSH6320</option>
+                                    <option value="3" @if (request()->get('id') == 3)
+                                        selected
+                                        @endif>DITOKI 3@KSH9870</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid country.
@@ -136,43 +106,97 @@
 
                             </div>
                             <!--Grid column-->
+                            <div class="col-md-12 mb-2">
 
-                            <!--Grid row-->
+                                <!--firstName-->
+                                <div class="md-form ">
+                                    <input type="text" id="firstName" class="form-control" name="full_name">
+                                    <label for="firstName" class="">Full name</label>
+                                </div>
 
-                            <!--email-->
-                            <div class="md-form mb-5">
-                                <input type="text" id="email" class="form-control" placeholder="youremail@example.com">
-                                <label for="email" class="">Email (optional)</label>
                             </div>
 
-                            <!--address-->
-                            <div class="md-form mb-5">
-                                <input type="text" id="phone" class="form-control" placeholder="+254..." name="phone">
-                                <label for="phone">Phone Number</label>
+                            <!--Grid column-->
+
+                        </div>
+                        <!--Grid row-->
+
+                        <div class="md-form mb-5">
+                            <input type="text" name="address" id="address" class="form-control"
+                                placeholder="Address/street/major landmark">
+                            <label for="address" class="">Address</label>
+                        </div>
+
+                        <!--Grid row-->
+                        <div class="md-form ">
+                            <input type="text" id="firstName" class="form-control" name="city">
+                            <label for="city" class="">City</label>
+                        </div>
+                        <!--Grid column-->
+                        <div class="col-lg-12 col-md-12 mb-4">
+
+                            <label for="country">State/Region</label>
+                            <select class="custom-select d-block w-100" id="country" name="region">
+                                <option value="">City/Region</option>
+                                <option value="Nairobi">Nairobi</option>
+                                <option value="Coast">Coast</option>
+                                <option value="Nyanza">Nyanza</option>
+                                <option value="Central">Central</option>
+                                <option value="Rift valley">Rift valley</option>
+                                <option value="Eastern">Eastern</option>
+                                <option value="Western">Western</option>
+                                <option value="North Eastern">North Eastern</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid country.
                             </div>
-                            <hr>
 
-                            <hr class="mb-4">
-                            <button class="btn btn-primary btn-lg " type="submit">Complete order</button>
-                            <button class="btn  btn-lg " style="background: #84142d; color: #fff" href="https://infod7e4cf.clickfunnels.com/optin1610366060595">Continue shopping</button>
-                        </form>
+                        </div>
+                        <!--Grid column-->
 
-                    </div>
-                    <!--/.Card-->
+                        <!--Grid row-->
+
+                        <!--email-->
+                        <div class="md-form mb-5">
+                            <input type="text" id="email" class="form-control" placeholder="youremail@example.com">
+                            <label for="email" class="">Email (optional)</label>
+                        </div>
+
+                        <!--address-->
+                        <div class="md-form mb-5">
+                            <input type="text" id="phone" class="form-control" placeholder="+254..." name="phone">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <hr>
+
+                        <hr class="mb-4">
+                        <button class="btn btn-primary btn-lg " type="submit">Complete order</button>
+                        <a class="btn  btn-lg " style="background: #84142d; color: #fff" href="https://infod7e4cf.clickfunnels.com/optin1610366060595">Continue shopping</a>
+                    </form>
 
                 </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-
-                <!--Grid column-->
+                <!--/.Card-->
 
             </div>
-            <!--Grid row-->
+            <!--Grid column-->
+
+            <!--Grid column-->
+
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
 
         </div>
     </main>
     <!--Main layout-->
+    <nav class="navbar fixed-bottom navbar-light "  style="background: #84142d">
+        <div class="container-fluid">
+            <span style="margin: auto; color: #fff">For inquiries contact us on <a href="mailto:sales@dala.market"
+                    target="_blank"  style="color: #f0f0f0">sales@dala.market</a></span>
+            {{-- For inquiries contact us on <a class="navbar-brand" href="#">sales@dala.market</a> --}}
+        </div>
+    </nav>
 
 </body>
 
