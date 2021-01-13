@@ -154,8 +154,7 @@
 
                             <hr class="mb-4">
                             <button class="btn btn-primary btn-lg " type="submit">Complete order</button>
-                            <button class="btn  btn-lg " type="submit" style="background: #84142d; color: #fff"
-                                href="/">Continue shopping</button>
+                            <button class="btn  btn-lg " style="background: #84142d; color: #fff" href="https://infod7e4cf.clickfunnels.com/optin1610366060595">Continue shopping</button>
                         </form>
 
                     </div>
