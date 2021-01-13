@@ -67,26 +67,19 @@
 
         <!-- Heading -->
         <h2 class="my-5 h2 text-center" style="color: rgb(132, 20, 45);">Place Your Order</h2>
-
         <!--Grid row-->
         <div class="row">
-
             <!--Grid column-->
             <div class="col-md-10 mb-6 offset-1">
-
                 <!--Card-->
                 <div class="card">
-
                     <!--Card content-->
-
                     <form action="{{ route('send') }}" method="POST" class="card-body">
                         @csrf
-
                         <!--Grid row-->
                         <div class="row">
                             <div class="col-lg-12 col-md-12 mb-4">
-
-                                <label for="country">Product</label>
+                                <label for="country" style="color: #7b7b7bb5;">Product</label>
                                 <select class="custom-select d-block w-100" id="country" required name="item">
                                     <option value="">Select Item</option>
 
@@ -103,7 +96,6 @@
                                 <div class="invalid-feedback">
                                     Please select a valid country.
                                 </div>
-
                             </div>
                             <!--Grid column-->
                             <div class="col-md-12 mb-2">
@@ -113,14 +105,10 @@
                                     <input type="text" id="firstName" class="form-control" name="full_name">
                                     <label for="firstName" class="">Full name</label>
                                 </div>
-
                             </div>
-
                             <!--Grid column-->
-
                         </div>
                         <!--Grid row-->
-
                         <div class="md-form mb-5">
                             <input type="text" name="address" id="address" class="form-control"
                                 placeholder="Address/street/major landmark">
@@ -133,9 +121,8 @@
                             <label for="city" class="">City</label>
                         </div>
                         <!--Grid column-->
-                        <div class="col-lg-12 col-md-12 mb-4">
 
-                            <label for="country">State/Region</label>
+                            <label for="country" style="color: #7b7b7bb5;">State/Region</label>
                             <select class="custom-select d-block w-100" id="country" name="region">
                                 <option value="">City/Region</option>
                                 <option value="Nairobi">Nairobi</option>
@@ -147,11 +134,7 @@
                                 <option value="Western">Western</option>
                                 <option value="North Eastern">North Eastern</option>
                             </select>
-                            <div class="invalid-feedback">
-                                Please select a valid country.
-                            </div>
 
-                        </div>
                         <!--Grid column-->
 
                         <!--Grid row-->
@@ -176,17 +159,9 @@
 
                 </div>
                 <!--/.Card-->
-
             </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-
-            <!--Grid column-->
-
         </div>
         <!--Grid row-->
-
         </div>
     </main>
     <!--Main layout-->
@@ -197,9 +172,7 @@
             {{-- For inquiries contact us on <a class="navbar-brand" href="#">sales@dala.market</a> --}}
         </div>
     </nav>
-
 </body>
-
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
