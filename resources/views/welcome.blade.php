@@ -37,11 +37,9 @@
 <body>
 
     <div style="background: #eee;height: 125px">
-        <div class="container">
+        <div class="container" style="text-align: center;">
             <img src="https://images.clickfunnels.com/cdn-cgi/image/fit=scale-down,width=525,quality=75/https://images.clickfunnels.com/93/58c4f49d2141ea91f98fd9248566bc/detoki.png"
-                width="200px" style="margin-top: 30px" alt="">
-            <a class="btn  btn-lg " style="background: #84142d; color: #fff;float: right;margin-top: 40px;" href="https://infod7e4cf.clickfunnels.com/optin1610366060595"><i class="fa fa_prepended far fa-check-square" style="margin-right: 10px;"></i>Shop Now</a>
-
+                width="200px" style="margin-top: 30px;" alt="">
         </div>
     </div>
     <nav class="navbar navbar-light" style="background: #84142d">
