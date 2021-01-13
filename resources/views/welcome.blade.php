@@ -85,13 +85,13 @@
 
                                     <option value="1" @if (request()->get('id') == 1)
                                         selected
-                                        @endif>DITOKI 1@KSH4320</option>
+                                        @endif>1 DITOKI FOOT PATCH @KSH4320</option>
                                     <option value="2" @if (request()->get('id') == 2)
                                         selected
-                                        @endif>DITOKI 2@KSH6320</option>
+                                        @endif>2 DITOKI FOOT PATCHES @@KSH6320</option>
                                     <option value="3" @if (request()->get('id') == 3)
                                         selected
-                                        @endif>DITOKI 3@KSH9870</option>
+                                        @endif>3 DITOKI FOOT PATCHES @@KSH9870</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid country.
@@ -124,7 +124,7 @@
 
                             <label for="country" style="color: #7b7b7bb5;">State/Region</label>
                             <select class="custom-select d-block w-100" id="country" name="region">
-                                <option value="">City/Region</option>
+                                <option value="">State/Region</option>
                                 <option value="Nairobi">Nairobi</option>
                                 <option value="Coast">Coast</option>
                                 <option value="Nyanza">Nyanza</option>
