@@ -33,6 +33,7 @@ class SendMail extends Mailable
         // return $this->markdown('mail/mail');
         return $this->from('jimlaravel@gmail.com')
             ->markdown('mail.mail')
+            ->subject('New Order')
             ->to(env('MAIL_TO', 'jimkiarie8@gmail.com'));
     }
 }
