@@ -35,7 +35,7 @@
 <body>
     <nav class="navbar fixed-top navbar-light" style="background: #84142d">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="color: #fff">Navbar</a>
+            <a class="navbar-brand" href="#" style="color: #fff">DALA ONLINE STORES</a>
         </div>
     </nav>
 
