@@ -7,7 +7,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <link rel='icon' type='image/png' href='https://www.clickfunnels.com/favicon.ico'></link>
+    <link rel='icon' type='image/png' href='https://www.clickfunnels.com/favicon.ico'>
+    </link>
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
     {{--
@@ -19,7 +20,8 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <!-- Styles -->
@@ -33,9 +35,18 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-light" style="background: #84142d">
+
+    <div style="background: #eee;height: 125px">
+        <div class="container">
+            <img src="https://images.clickfunnels.com/cdn-cgi/image/fit=scale-down,width=525,quality=75/https://images.clickfunnels.com/93/58c4f49d2141ea91f98fd9248566bc/detoki.png"
+                width="200px" style="margin-top: 30px" alt="">
+            <a class="btn  btn-lg " style="background: #84142d; color: #fff;float: right;margin-top: 40px;" href="https://infod7e4cf.clickfunnels.com/optin1610366060595"><i class="fa fa_prepended far fa-check-square" style="margin-right: 10px;"></i>Shop Now</a>
+
+        </div>
+    </div>
+    <nav class="navbar navbar-light" style="background: #84142d">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="color: #fff">DALA ONLINE STORES</a>
+            <h1 class="navbar-brand" style=" margin: auto;text-align: center; font-size: 23px; color: rgb(255, 255, 255);    font-weight: 500;">TODAYS OFFER: DETOKI PACK FOR <b style="color:rgb(255, 227, 0)">KSH 4320</b> NOT KSH 5000</h1>
         </div>
     </nav>
 
@@ -51,7 +62,7 @@
 
             @if($errors->any())
             @foreach ($errors->all() as $error)
-              <div class="alert alert-danger">{{ $error }}</div>
+            <div class="alert alert-danger">{{ $error }}</div>
             @endforeach
             @endif
 
@@ -85,13 +96,13 @@
 
                                     <option value="1" @if (request()->get('id') == 1)
                                         selected
-                                        @endif>1 DITOKI FOOT PATCH @KSH4320</option>
+                                        @endif>1 DETOKI DETOX FOOT PATCHES @KSH4320</option>
                                     <option value="2" @if (request()->get('id') == 2)
                                         selected
-                                        @endif>2 DITOKI FOOT PATCHES @@KSH6320</option>
+                                        @endif>2 DETOKI DETOX FOOT PATCHES @KSH6320</option>
                                     <option value="3" @if (request()->get('id') == 3)
                                         selected
-                                        @endif>3 DITOKI FOOT PATCHES @@KSH9870</option>
+                                        @endif>3 DETOKI DETOX FOOT PATCHES @KSH9870</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid country.
@@ -122,18 +133,18 @@
                         </div>
                         <!--Grid column-->
 
-                            <label for="country" style="color: #7b7b7bb5;">State/Region</label>
-                            <select class="custom-select d-block w-100" id="country" name="region">
-                                <option value="">State/Region</option>
-                                <option value="Nairobi">Nairobi</option>
-                                <option value="Coast">Coast</option>
-                                <option value="Nyanza">Nyanza</option>
-                                <option value="Central">Central</option>
-                                <option value="Rift valley">Rift valley</option>
-                                <option value="Eastern">Eastern</option>
-                                <option value="Western">Western</option>
-                                <option value="North Eastern">North Eastern</option>
-                            </select>
+                        <label for="country" style="color: #7b7b7bb5;">State/Region</label>
+                        <select class="custom-select d-block w-100" id="country" name="region">
+                            <option value="">State/Region</option>
+                            <option value="Nairobi">Nairobi</option>
+                            <option value="Coast">Coast</option>
+                            <option value="Nyanza">Nyanza</option>
+                            <option value="Central">Central</option>
+                            <option value="Rift valley">Rift valley</option>
+                            <option value="Eastern">Eastern</option>
+                            <option value="Western">Western</option>
+                            <option value="North Eastern">North Eastern</option>
+                        </select>
 
                         <!--Grid column-->
 
@@ -154,7 +165,8 @@
 
                         <hr class="mb-4">
                         <button class="btn btn-primary btn-lg " type="submit">Complete order</button>
-                        <a class="btn  btn-lg " style="background: #84142d; color: #fff" href="https://infod7e4cf.clickfunnels.com/optin1610366060595">Continue shopping</a>
+                        <a class="btn  btn-lg " style="background: #84142d; color: #fff"
+                            href="https://infod7e4cf.clickfunnels.com/optin1610366060595">Continue shopping</a>
                     </form>
 
                 </div>
@@ -165,10 +177,10 @@
         </div>
     </main>
     <!--Main layout-->
-    <nav class="navbar fixed-bottom navbar-light "  style="background: #84142d">
+    <nav class="navbar fixed-bottom navbar-light " style="background: #84142d">
         <div class="container-fluid">
             <span style="margin: auto; color: #fff">For inquiries contact us on <a href="mailto:sales@dala.market"
-                    target="_blank"  style="color: #f0f0f0">sales@dala.market</a></span>
+                    target="_blank" style="color: #f0f0f0">sales@dala.market</a></span>
             {{-- For inquiries contact us on <a class="navbar-brand" href="#">sales@dala.market</a> --}}
         </div>
     </nav>
