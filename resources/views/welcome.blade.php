@@ -78,10 +78,10 @@
                                             @endif>DITOKI 1@KSH4320</option>
                                         <option value="2" @if (request()->get('id') == 2)
                                             selected
-                                            @endif>DITOKI 1@KSH6320</option>
+                                            @endif>DITOKI 2@KSH6320</option>
                                         <option value="3" @if (request()->get('id') == 3)
                                             selected
-                                            @endif>DITOKI 1@KSH9870</option>
+                                            @endif>DITOKI 3@KSH9870</option>
                                     </select>
                                     <div class="invalid-feedback">
                                         Please select a valid country.
@@ -122,8 +122,13 @@
                                 <select class="custom-select d-block w-100" id="country" name="region">
                                     <option value="">City/Region</option>
                                     <option value="Nairobi">Nairobi</option>
-                                    <option value="Mombasa">Mombasa</option>
-                                    <option value="Kisumu">Kisumu</option>
+                                    <option value="Coast">Coast</option>
+                                    <option value="Nyanza">Nyanza</option>
+                                    <option value="Central">Central</option>
+                                    <option value="Rift valley">Rift valley</option>
+                                    <option value="Eastern">Eastern</option>
+                                    <option value="Western">Western</option>
+                                    <option value="North Eastern">North Eastern</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid country.
