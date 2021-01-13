@@ -28,9 +28,14 @@
     <!-- Scripts -->
     {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
     <style>
-        /* .mt-5, .my-5 {
-    margin-top: 0 important;
-} */
+        .fa, .fas {
+            font-size: 30px;
+            border: 1px solid #862c2d;
+            padding: 10px;
+            border-radius: 50%;
+            background: #000;
+            color: #eee;
+        }
     </style>
 </head>
 
@@ -44,7 +49,9 @@
     </div>
     <nav class="navbar navbar-light" style="background: #84142d">
         <div class="container-fluid">
-            <h1 class="navbar-brand" style=" margin: auto;text-align: center; font-size: 23px; color: rgb(255, 255, 255);    font-weight: 500;">TODAYS OFFER: DETOKI PACK FOR <b style="color:rgb(255, 227, 0)">KSH 4320</b> NOT KSH 5000</h1>
+            <h1 class="navbar-brand"
+                style=" margin: auto;text-align: center; font-size: 23px; color: rgb(255, 255, 255);    font-weight: 500;">
+                TODAYS OFFER: DETOKI PACK FOR <b style="color:rgb(255, 227, 0)">KSH 4320</b> NOT KSH 5000</h1>
         </div>
     </nav>
 
@@ -79,7 +86,7 @@
         <!--Grid row-->
         <div class="row">
             <!--Grid column-->
-            <div class="col-md-10 mb-6 offset-1">
+            <div class="col-md-7 mb-6">
                 <!--Card-->
                 <div class="card">
                     <!--Card content-->
@@ -170,6 +177,57 @@
                 </div>
                 <!--/.Card-->
             </div>
+
+
+            <div class="col-md-5 mb-4">
+                <!-- Cart -->
+                <ul class="list-group mb-3 z-depth-1">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <i class="fas fa-comment-dollar"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <h6 class="my-0">100% MONEY BACK GUARANTEE</h6>
+                                <small class="text-muted">If you're not satisfied with the product, return it and we
+                                    will
+                                    give your money back - no questions asked</small>
+                            </div>
+                        </div>
+                        {{-- <span class="text-muted">$12</span> --}}
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <h6 class="my-0">DELIVERY IS FREE</h6>
+                                <small class="text-muted">This price includes all taxes and VAT, and delivery is free.
+                                    The product will be delivered to your doorstep within 2-7 business days from the
+                                    date you placed the order</small>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <h6 class="my-0">PAYMENT METHOD</h6>
+                                <small class="text-muted">Payment method is cash on delivery. You pay nothing in
+                                    advance.</small>
+                            </div>
+                        </div>
+                        {{-- <span class="text-muted">$5</span> --}}
+                    </li>
+                </ul>
+                <!-- Cart -->
+
+            </div>
+
+
         </div>
         <!--Grid row-->
         </div>
