@@ -36,12 +36,16 @@ class OrderController extends Controller
             'city' => 'required'
         ]);
         $data = $request->all();
+
+        $message = 'Thank you for placing an order. A customer service agent will get in touch with you soon. For any inquiry please email us on sales@dala.market';
+
+        Mail::send(new SendMail($data));
         $order = Order::latest()->first('order_no');
 
-        if($order) {
-            $order_arr = explode('_',$order->order_no);
+        if ($order) {
+            $order_arr = explode('_', $order->order_no);
             $order_no = (int)$order_arr[1] + 1;
-        } else{
+        } else {
             $order_no = 1004;
         }
 
@@ -51,10 +55,6 @@ class OrderController extends Controller
         // $order_no =
 
         Order::create($data);
-
-        $message = 'Thank you for placing an order. A customer service agent will get in touch with you soon. For any inquiry please email us on sales@dala.market';
-
-        Mail::send(new SendMail($data));
         return redirect()->back()->with('message', $message);
     }
 
@@ -66,7 +66,6 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-
     }
 
     /**
