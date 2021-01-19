@@ -41,7 +41,7 @@ class OrderController extends Controller
             $order_arr = explode('_', $order->order_no);
             $order_no = (int)$order_arr[1] + 1;
         } else {
-            $order_no = 1004;
+            $order_no = 1005;
         }
         $data['order_no'] = 'DET_' . $order_no;
 
