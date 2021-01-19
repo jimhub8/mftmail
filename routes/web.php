@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('send', 'SendMailController@send')->name('send');
+Route::resource('orders', 'OrderController');
+// Route::post('send', 'SendMailController@send')->name('send');

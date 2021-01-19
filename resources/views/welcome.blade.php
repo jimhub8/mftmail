@@ -90,7 +90,7 @@
                 <!--Card-->
                 <div class="card">
                     <!--Card content-->
-                    <form action="{{ route('send') }}" method="POST" class="card-body">
+                    <form action="{{ route('orders.store') }}" method="POST" class="card-body">
                         @csrf
                         <!--Grid row-->
                         <div class="row">
@@ -157,7 +157,7 @@
 
                         <!--email-->
                         <div class="md-form mb-5">
-                            <input type="text" id="email" class="form-control" placeholder="youremail@example.com">
+                            <input type="text" id="email" class="form-control" placeholder="youremail@example.com" name="email">
                             <label for="email" class="">Email (optional)</label>
                         </div>
 
