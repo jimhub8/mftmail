@@ -58,7 +58,7 @@
 
     <!--Main layout-->
     <main class="mt-5 pt-4" style="background: #eee;margin-top: 0 important;    margin-bottom: 60px;">
-        <div class="card">
+        <div class="card" style="width: 80%;margin: auto;">
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
