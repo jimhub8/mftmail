@@ -81,7 +81,6 @@
                         <td>{{ $order->address }}</td>
                         <td>{{ $order->city }}</td>
                         <td>{{ $order->phone }}</td>
-                        <td>Cell</td>
                     </tr>
                     @endforeach
 

@@ -1,5 +1,5 @@
 @component('mail::message')
-# New Order
+# New Order: {{ $data['order_no'] }}
 
 You have an order for {{ $data['item'] }} DETOKI DETOX FOOT PATCHES
 
