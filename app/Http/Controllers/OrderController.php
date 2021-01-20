@@ -38,12 +38,12 @@ class OrderController extends Controller
         $data = $request->all();
         $order = Order::latest()->first('order_no');
         if ($order) {
-            $order_arr = explode('_', $order->order_no);
+            $order_arr = explode('-', $order->order_no);
             $order_no = (int)$order_arr[1] + 1;
         } else {
             $order_no = 1005;
         }
-        $data['order_no'] = 'DET_' . $order_no;
+        $data['order_no'] = 'DET-' . $order_no;
 
         $message = 'Thank you for placing an order. A customer service agent will get in touch with you soon. For any inquiry please email us on sales@dala.market';
 
