@@ -64,6 +64,7 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Order No.</th>
+                        <th scope="col">Item</th>
                         <th scope="col">Full Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Address</th>
@@ -76,6 +77,7 @@
                     <tr>
                         <th scope="row">{{ $key + 1 }}</th>
                         <td>{{ $order->order_no }}</td>
+                        <td>{{ $order->product }}</td>
                         <td>{{ $order->full_name }}</td>
                         <td>{{ $order->email }}</td>
                         <td>{{ $order->address }}</td>

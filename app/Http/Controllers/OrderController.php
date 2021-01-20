@@ -43,6 +43,7 @@ class OrderController extends Controller
         } else {
             $order_no = 1005;
         }
+        $data['product'] = $request->item;
         $data['order_no'] = 'DET-' . $order_no;
 
         $message = 'Thank you for placing an order. A customer service agent will get in touch with you soon. For any inquiry please email us on sales@dala.market';

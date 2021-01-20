@@ -99,13 +99,13 @@
                                 <select class="custom-select d-block w-100" id="country" required name="item">
                                     <option value="">Select Item</option>
 
-                                    <option value="1" @if (request()->get('id') == 1)
+                                    <option value="1 DETOKI DETOX FOOT PATCHES @KSH4320" @if (request()->get('id') == 1)
                                         selected
                                         @endif>1 DETOKI DETOX FOOT PATCHES @KSH4320</option>
-                                    <option value="2" @if (request()->get('id') == 2)
+                                    <option value="2 DETOKI DETOX FOOT PATCHES @KSH6320" @if (request()->get('id') == 2)
                                         selected
                                         @endif>2 DETOKI DETOX FOOT PATCHES @KSH6320</option>
-                                    <option value="3" @if (request()->get('id') == 3)
+                                    <option value="3 DETOKI DETOX FOOT PATCHES @KSH9870" @if (request()->get('id') == 3)
                                         selected
                                         @endif>3 DETOKI DETOX FOOT PATCHES @KSH9870</option>
                                 </select>
